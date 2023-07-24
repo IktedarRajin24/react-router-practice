@@ -51,6 +51,10 @@ const router = createBrowserRouter([
         element: <PostDetails></PostDetails>,
         loader: ({params}) => axios.get(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
 
+      },
+      {
+        path: "*",
+        element: <div>404 not found</div>
       }
     ]
   }
